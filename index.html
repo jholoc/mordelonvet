@@ -3,25 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Embedded Page</title>
+    <title>Redirection</title>
     <style>
         body, html {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
             margin: 0;
-            padding: 0;
-            height: 100%;
-            overflow: hidden;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
         }
-        iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
+        .message {
+            text-align: center;
         }
     </style>
 </head>
 <body>
-    <iframe src="https://project9887435.tilda.ws/"></iframe>
+    <div class="message">
+        <p>You will be redirected to the requested page in 2 seconds...</p>
+        <p>If you are not redirected automatically, follow this <a href="https://project9887435.tilda.ws/">link</a>.</p>
+    </div>
+
+    <script>
+        setTimeout(function() {
+            window.location.href = 'https://project9887435.tilda.ws/';
+        }, 2000); // 2000 milliseconds = 2 seconds
+    </script>
 </body>
 </html>
